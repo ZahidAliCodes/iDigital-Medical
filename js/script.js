@@ -114,3 +114,21 @@ if (flexWrappers.length > 0) {
         }
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector('video[data-src]');
+  const cached = sessionStorage.getItem('heroVideoLoaded');
+
+  if (!cached) {
+    video.src = video.dataset.src;
+    video.oncanplaythrough = () => {
+      video.play();
+      sessionStorage.setItem('heroVideoLoaded', 'true');
+    };
+  } else {
+    // Already loaded once in session, play immediately
+    video.src = video.dataset.src;
+    video.play();
+  }
+});

@@ -41,7 +41,10 @@
             </a>
         </header>
         <section class="hero">
-            <video src="assets/videos/about-hero.mp4" autoplay muted loop></video>
+            <video autoplay muted loop playsinline preload="auto">
+                <source src="assets/videos/about-hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>About iDigital Medical Research</h1>

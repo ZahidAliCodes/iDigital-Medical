@@ -51,7 +51,10 @@
         </header>
 
         <section class="hero">
-            <video src="assets/videos/home-hero.mp4" autoplay muted loop></video>
+            <video autoplay muted loop playsinline preload="auto">
+            <source src="assets/videos/home-hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Revolutionary AI-Powered Medical Research</h1>
@@ -412,7 +415,7 @@
             <div class="footer-divider"></div>
             <p class="footer-copy">©Kholoud Atta 2025 • All rights reserved</p>
         </footer>
-        
+
         <script src="js/script.js"></script>
         <script src="js/showcase-slider.js"></script>
     </body>
