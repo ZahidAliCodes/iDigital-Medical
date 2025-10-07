@@ -1,0 +1,42 @@
+
+.neurotech-content{
+    display: flex;
+    margin: 48px 0 0 0;
+}
+.neurotech-content h1{
+    font-size: 36px;
+    line-height: 42px;
+    color: #1a1938;
+    font-weight: 700;
+    margin: 0 0 0 34px;
+    width: 48%;
+}
+.neurotech-content p{
+    width: 48%;
+    font-size: 24px;
+    font-weight: 300;
+    color: #1a1938;
+}
+.neurotech-video{
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    margin: 48px 0 0 0;
+}
+.neurotech-video img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.service-bg{
+    background: transparent;
+}
+.neurotech-1{
+    background-color: #F5F5F5;
+}
+.wrap-center {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}

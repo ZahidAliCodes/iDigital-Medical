@@ -24,6 +24,23 @@ if (header) {
   });
 }
 
+document.querySelectorAll('.has-dropdown > .nav-link').forEach(link => {
+  const dropdown = link.nextElementSibling;
+  let tappedOnce = false;
+
+  link.addEventListener('touchstart', function (e) {
+    if (window.innerWidth >= 992) return; 
+
+    if (!tappedOnce) {
+      tappedOnce = true;
+      e.preventDefault(); 
+      dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+      setTimeout(() => tappedOnce = false, 1000); 
+    } else {
+      window.location.href = this.getAttribute('href');
+    }
+  });
+});
 
 /* ===========================
    Hamburger Menu Toggle (Mobile)
