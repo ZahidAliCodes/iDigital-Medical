@@ -235,22 +235,22 @@ button {
 }
 .hero-content {
     position: relative;
-    z-index: 1; /* Ensure text is above overlay */
+    z-index: 1; 
 }
-
 .hero-content h1 {
     font-size: 54px;
     color: #1a1938;
     font-weight: 600;
     margin: 0 auto 10px 0;
+    text-shadow: 1px 1px 3px rgba(26, 25, 56, 0.4); 
 }
 .hero-content p {
     font-size: 27px;
     color: #1a1938;
     max-width: 1000px;
     margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(26, 25, 56, 0.4); 
 }
-
 /* ================= Hamburger ================= */
 .hamburger {
     display: none;
