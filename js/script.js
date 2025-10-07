@@ -115,7 +115,6 @@ if (flexWrappers.length > 0) {
     });
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector('video[data-src]');
   const cached = sessionStorage.getItem('heroVideoLoaded');

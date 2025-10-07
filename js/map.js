@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var map = L.map("global-map", {
         center: [38.9072, -77.0369], // Washington, DC
         zoom: 9,
-        zoomControl: false, // remove +/-
+        zoomControl: false, 
       });
-
       // Add map tiles (Google-like style)
       L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -16,6 +15,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       ).addTo(map);
 
-      // Add marker (no popup)
       L.marker([38.9072, -77.0369]).addTo(map);
     });
