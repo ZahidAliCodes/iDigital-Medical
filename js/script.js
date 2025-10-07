@@ -11,18 +11,19 @@
 const header = document.getElementById("siteHeader");
 
 if (header) {
-    const logo = header.querySelector(".site-logo");
+  const logo = header.querySelector(".site-logo");
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header.classList.add("sticky");
-            if (logo) logo.style.color = "#000";
-        } else {
-            header.classList.remove("sticky");
-            if (logo) logo.style.color = "#fff";
-        }
-    });
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("sticky");
+      if (logo) logo.style.color = "#000";
+    } else {
+      header.classList.remove("sticky");
+      if (logo) logo.style.color = "#fff";
+    }
+  });
 }
+
 
 /* ===========================
    Hamburger Menu Toggle (Mobile)
