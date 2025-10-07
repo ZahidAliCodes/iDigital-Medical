@@ -21,6 +21,9 @@
     --space-lg: 32px;
     --space-xl: 64px;
 
+    --LinearforSee: linear-gradient(180deg, #1A1938 0%, #2AF 100%);
+
+
     /* Border Radius */
     --radius-sm: 5px;
     --radius-md: 10px;
@@ -247,6 +250,7 @@ button {
 .hero-content p {
     font-size: 27px;
     color: #1a1938;
+    font-weight: 400;
     max-width: 1000px;
     margin: 0 auto;
     text-shadow: 1px 1px 3px rgba(26, 25, 56, 0.4);
@@ -336,6 +340,9 @@ button {
     overflow: hidden;
     flex-direction: row;
 }
+.swiper-slide::before,
+.feature-card:not(.active)::before,
+.swiper-slide::before,
 .our-services-card::before {
     content: "";
     position: absolute;

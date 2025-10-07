@@ -117,6 +117,8 @@ if (flexWrappers.length > 0) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector('video[data-src]');
+  if (!video) return; // Exit if video not found
+
   const cached = sessionStorage.getItem('heroVideoLoaded');
 
   if (!cached) {
@@ -126,8 +128,25 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.setItem('heroVideoLoaded', 'true');
     };
   } else {
-    // Already loaded once in session, play immediately
     video.src = video.dataset.src;
     video.play();
   }
+});
+
+
+const featureCards = document.querySelectorAll('.feature-card');
+
+featureCards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Check if clicked card is already active
+    if (!card.classList.contains('active')) {
+      // Remove active from all other cards
+      featureCards.forEach(c => c.classList.remove('active'));
+      // Add active to clicked card
+      card.classList.add('active');
+    } else {
+      // Optional: If clicked card is already active, do nothing
+      console.log('Card is already active');
+    }
+  });
 });
