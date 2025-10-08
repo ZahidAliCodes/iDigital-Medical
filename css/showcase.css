@@ -1,4 +1,11 @@
-/* Feature Slider Container */
+/* ==========================================================================
+   FEATURE SLIDER SECTION
+   This section styles the feature slider with text and stacked image cards.
+   ========================================================================== */
+
+/* ===============================
+   Container & Layout
+   =============================== */
 .feature-slider-container {
     display: flex;
     align-items: center;
@@ -7,14 +14,16 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
-/* Feature Content */
+/* ===============================
+   Text Content Area
+   =============================== */
 .feature-content {
     flex: 1 1 50%;
     min-width: 280px;
-    z-index: 5;
+    z-index: 5; 
 }
 
 .feature-text-slides {
@@ -39,34 +48,38 @@
 
 .feature-text-slide h3 {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     margin: 1.5rem 0 0.5rem 0;
 }
 
 .feature-text-slide p {
-    color: #1a1938;
+    color: var(--primary-color);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     line-height: 1.5;
 }
 
-/* Feature Images */
+/* ===============================
+   Feature Image Stack
+   =============================== */
 .feature-images {
     flex: 1 1 42%;
     position: relative;
     cursor: pointer;
     min-width: 280px;
-    height: 380px; /* Fixed height */
+    height: 380px; 
 }
 
-/* Image Cards */
+/* ===============================
+   Image Card
+   =============================== */
 .feature-image-card {
     position: absolute;
     top: 50%;
     left: 68%;
     width: 100%;
     max-width: 380px;
-    height: 380px; /* Fixed height */
+    height: 380px; 
     aspect-ratio: 16/10;
     border-radius: 34px;
     overflow: hidden;
@@ -76,7 +89,6 @@
     transform: translate(-50%, -50%) scale(0.8);
 }
 
-/* Image inside card */
 .feature-image-card img {
     width: 100%;
     height: 100%;
@@ -85,7 +97,9 @@
     transition: transform 0.5s ease-in-out;
 }
 
-/* Caption */
+/* ===============================
+   Caption Overlay
+   =============================== */
 .feature-image-card figcaption {
     position: absolute;
     bottom: 0;
@@ -99,13 +113,15 @@
     text-align: center;
     padding: 24px 15px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.4s ease;
 }
 
-/* Active Card */
+/* ===============================
+   Active & Stacked States
+   =============================== */
 .feature-image-card.active {
     z-index: 10;
     opacity: 1;
@@ -117,13 +133,15 @@
     transform: translateY(0);
 }
 
-/* Stacked Positions */
+/* Layered stacked positions for previous images */
 .feature-image-card.prev1 { z-index: 9; transform: translate(-60%, -50%) scale(0.95); opacity: 0.85; }
 .feature-image-card.prev2 { z-index: 8; transform: translate(-70%, -50%) scale(0.9); opacity: 0.7; }
 .feature-image-card.prev3 { z-index: 7; transform: translate(-80%, -50%) scale(0.85); opacity: 0.6; }
 .feature-image-card.prev4 { z-index: 6; transform: translate(-90%, -50%) scale(0.8); opacity: 0.5; }
 
-/* Responsive Adjustments */
+/* ===============================
+   Responsive Adjustments
+   =============================== */
 @media (max-width: 900px) {
     .feature-slider-container {
         flex-direction: column;
@@ -133,7 +151,7 @@
     .feature-images {
         width: 100%;
         margin-top: 2rem;
-        height: 400px; /* Keep fixed height */
+        height: 400px;
     }
     .feature-image-card.prev1 { transform: translate(-55%, -50%) scale(0.95); }
     .feature-image-card.prev2 { transform: translate(-60%, -50%) scale(0.9); }
@@ -144,7 +162,7 @@
 @media (max-width: 500px) {
     .feature-text-slide h3 { font-size: 1.5rem; }
     .feature-text-slide p { font-size: 0.9rem; }
-    .feature-images { height: 400px; /* Keep fixed height */ }
+    .feature-images { height: 400px; }
     .feature-image-card.prev1 { transform: translate(-52%, -50%) scale(0.95); }
     .feature-image-card.prev2 { transform: translate(-57%, -50%) scale(0.9); }
     .feature-image-card.prev3 { transform: translate(-62%, -50%) scale(0.85); }

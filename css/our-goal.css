@@ -1,9 +1,16 @@
+/* =========================================================
+   Driven Text Section
+   ========================================================= */
 .driven-text {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     margin: 40px 0 0 0;
-    color: #1a1938;
+    color: var(--primary-color);
 }
+
+/* =========================================================
+   Feature Solution & Vision Section (General Layout)
+   ========================================================= */
 .feat-salution-main,
 .vision-main {
     padding: 140px 0 0 0;
@@ -13,79 +20,84 @@
     text-align: center;
     gap: 60px;
 }
+
+/* =========================================================
+   Vision Section — Image Container
+   ========================================================= */
 .vision-img {
     height: 700px;
-    border-radius: 24px;
+    border-radius: var(--radius);
     overflow: hidden;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: var(--shadow);
 }
+
 .vision-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
 .vision-main p {
     margin: 0;
 }
+
 .vision-main h2 {
-    color: #1A1938;
+    color: var(--primary-color);
     text-align: center;
     font-size: 42px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
 }
-/* --------------=========--------- */
+
+/* =========================================================
+   Image Slider Section
+   ========================================================= */
 .image-slider {
     position: relative;
     width: 100%;
     height: 600px;
     overflow: hidden;
-  }
+}
 
-  .image-slider__image {
+.image-slider__image {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: none;
     transition: opacity 0.5s ease;
-  }
-  .image-slider__image--active {
-    display: block;
-  }
+}
 
-  .image-slider__cta {
-       display: flex;
+.image-slider__image--active {
+    display: block;
+}
+
+.image-slider__cta {
+    display: flex;
     align-items: center;
     gap: 8px;
     font-size: 20px;
-    font-weight: 600;
-    color: #1a1938;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
     cursor: pointer;
-    transition: all 0.3s 
-ease;
+    transition: all 0.3s ease;
     user-select: none;
-  }
-  .image-slider__cta:hover{
-    color: #2f3166;
-  }
-  .image-slider__cta-icon {
+}
+
+.image-slider__cta:hover {
+    color: var(--primary-hover);
+}
+
+.image-slider__cta-icon {
     transition: transform 0.3s ease;
-  }
+}
 
-  .image-slider__cta:hover .image-slider__cta-icon {
+.image-slider__cta:hover .image-slider__cta-icon {
     transform: translateX(4px);
-  }
+}
 
-
-
-
-
-
-
-
-
-
-/* Swiper container */
+/* =========================================================
+   Swiper Slider Section
+   ========================================================= */
 .swiper {
   width: 100%;
   margin: 36px 0 140px 0;
@@ -93,9 +105,11 @@ ease;
   padding: 20px 0;
   box-sizing: border-box;
 }
+
 .swiper-wrapper {
   display: flex;
 }
+
 .swiper-slide {
   flex-shrink: 0;           
   width: 400px !important;  
@@ -105,35 +119,39 @@ ease;
   text-align: start;
   justify-content: space-between;
   padding: 28px 24px;
-  border-radius: 24px;
+  border-radius: var(--radius);
   margin-right: 16px;
 }
+
 .swiper-slide h1 {
     font-size: 22px;
-    color: #1A1938;
-    font-weight: 400;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-normal);
 }
+
 .swiper-slide p {
     font-size: 16px;
-    color: #1A1938;
-    font-weight: 300;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-light);
     line-height: 26px;
 }
+
 .swiper-slide a {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   color: #8c8c9b;
   transition: all 0.3s ease;
 }
-.swiper-slide a:hover{
+
+.swiper-slide a:hover {
     text-decoration: underline;
 }
 
+/* =========================================================
+   Responsive Breakpoints for Swiper
+   ========================================================= */
 
-
-
-
-/* Responsive adjustments */
+/* Medium Screens */
 @media (max-width: 1200px) {
   .swiper-slide {
     width: 300px !important;
@@ -141,6 +159,7 @@ ease;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   .swiper-slide {
     width: 250px !important;
@@ -157,6 +176,7 @@ ease;
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .swiper-slide {
     width: 200px !important;
@@ -172,6 +192,3 @@ ease;
     font-size: 12px;
   }
 }
-
-
-

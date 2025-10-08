@@ -1,9 +1,16 @@
+/* =========================================================
+   Typography & Base Text Styles
+   ========================================================= */
 .driven-text {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     margin: 40px 0 0 0;
-    color: #1a1938;
+    color: var(--primary-color);
 }
+
+/* =========================================================
+   Feature Solution & Vision Sections
+   ========================================================= */
 .feat-salution-main,
 .vision-main {
     padding: 140px 0 0 0;
@@ -13,33 +20,46 @@
     text-align: center;
     gap: 60px;
 }
+
 .vision-main p {
     margin: 0;
 }
+
 .vision-main h2 {
-    color: #1a1938;
+    color: var(--primary-color);
     text-align: center;
     font-size: 42px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
 }
+
+/* =========================================================
+   Neuro Surgery Section
+   ========================================================= */
 .neuro-surgery-main {
     display: flex;
     justify-content: space-between;
     padding: 120px 0 0 0;
 }
+
 .neuro-surgery-left {
     width: 56%;
 }
+
 .neuro-surgery-right {
     width: 30%;
     height: 414px;
 }
+
 .neuro-surgery-right img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: var(--radius);
 }
+
+/* =========================================================
+   Why Choose Robotic Section
+   ========================================================= */
 .Why-choose-robotic {
     padding: 120px 0 20px 0;
     display: flex;
@@ -48,6 +68,9 @@
     gap: 96px;
 }
 
+/* =========================================================
+   Feature Statistics Row Section
+   ========================================================= */
 .wrap {
     width: 100%;
 }
@@ -60,12 +83,14 @@
     padding-bottom: 20px;
     flex-wrap: wrap;
 }
+
 .box {
     flex: 1;
     text-align: center;
     position: relative;
     padding: 50px 0;
 }
+
 .box-flex {
     display: flex;
     align-items: center;
@@ -73,6 +98,7 @@
     gap: 14px;
 }
 
+/* Vertical divider line between boxes */
 .box:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -80,29 +106,34 @@
     bottom: 0;
     right: 0;
     padding: 1px;
-    background: linear-gradient(180deg, #1a1938 0%, #2af 100%);
-    -webkit-mask: linear-gradient(#f5f5f5 0 0) content-box, linear-gradient(#f5f5f5 0 0);
+    background: var(--LinearforSee);
+    -webkit-mask: var(--LinearMask);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     pointer-events: none;
 }
+
 .icon {
     width: 28px;
     height: 28px;
     margin-bottom: 8px;
 }
+
 .ttl {
     font-size: 30px;
-    font-weight: 400;
-    color: #1a1938;
+    font-weight: var(--font-weight-normal);
+    color: var(--primary-color);
 }
+
 .txt {
     font-size: 20px;
-    color: #1a1938;
+    color: var(--primary-color);
     line-height: 32px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     padding: 24px 0 0 0;
 }
+
+/* Top gradient line above footer */
 .btm {
     position: relative;
     margin: 0 auto;
@@ -112,15 +143,9 @@
     border-image: var(--LinearforSee) 1;
 }
 
-@media (max-width: 600px) {
-    .box:not(:last-child)::after {
-        display: none;
-    }
-    .row {
-        justify-content: center;
-    }
-}
-
+/* =========================================================
+   Feature Cards Section
+   ========================================================= */
 .feature-cards {
     display: flex;
     justify-content: space-between;
@@ -131,23 +156,24 @@
 .feature-card {
     flex: 0 0 19%;
     height: 400px;
-    border-radius: 24px;
+    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     cursor: pointer;
     transition: all 0.5s ease;
     overflow: hidden;
     position: relative;
-    color: #1a1938;
+    color: var(--primary-color);
     padding: 60px 24px;
 }
 
-/* When active — bigger size */
+/* Expanded active card */
 .feature-card.active {
     flex: 0 0 40%;
     justify-content: flex-start;
 }
 
+/* Active state gradient border and overlay */
 .feature-card.active::before {
     content: "";
     position: absolute;
@@ -156,18 +182,19 @@
     right: 0;
     bottom: 0;
     padding: 2px;
-    background: linear-gradient(180deg, #1a1938 0%, #2af 100%);
-    -webkit-mask: linear-gradient(#f5f5f5 0 0) content-box, linear-gradient(#f5f5f5 0 0);
+    background: var(--LinearforSee);
+    -webkit-mask: var(--LinearMask);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
-    border-radius: 24px;
+    border-radius: var(--radius);
     pointer-events: none;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--overlay);
     backdrop-filter: blur(1px);
     z-index: 1;
 }
 
+/* Card header */
 .feature-card__header {
     display: flex;
     align-items: center;
@@ -176,16 +203,18 @@
     z-index: 2;
 }
 
+/* Title & description */
 .feature-card__title {
     font-size: 50px;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 
 .feature-card__description {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
 }
 
+/* Compact card state (non-active) */
 .feature-card:not(.active) .feature-card__title {
     font-size: 35px;
     line-height: 22px;
@@ -195,19 +224,24 @@
     font-size: 14px;
     line-height: 20px;
 }
+
 .feature-card__para {
     display: none;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     line-height: 30px;
     margin-top: 20px;
     position: relative;
     z-index: 2;
 }
+
 .feature-card.active .feature-card__para {
     display: block;
 }
-/* Swiper container */
+
+/* =========================================================
+   Swiper Slider Section
+   ========================================================= */
 .swiper {
     width: 100%;
     margin: 36px 0 140px 0;
@@ -215,9 +249,11 @@
     padding: 20px 0;
     box-sizing: border-box;
 }
+
 .swiper-wrapper {
     display: flex;
 }
+
 .swiper-slide {
     flex-shrink: 0;
     width: 400px !important;
@@ -227,31 +263,37 @@
     text-align: start;
     justify-content: space-between;
     padding: 28px 24px;
-    border-radius: 24px;
+    border-radius: var(--radius);
     margin-right: 16px;
 }
+
 .swiper-slide h1 {
     font-size: 22px;
-    color: #1a1938;
-    font-weight: 400;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-normal);
 }
+
 .swiper-slide p {
     font-size: 16px;
-    color: #1a1938;
-    font-weight: 300;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-light);
     line-height: 26px;
 }
+
 .swiper-slide a {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     color: #8c8c9b;
     transition: all 0.3s ease;
 }
+
 .swiper-slide a:hover {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* =========================================================
+   Responsive Breakpoints
+   ========================================================= */
 @media (max-width: 1200px) {
     .swiper-slide {
         width: 300px !important;
@@ -272,6 +314,16 @@
 
     .swiper-slide p {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .box:not(:last-child)::after {
+        display: none;
+    }
+
+    .row {
+        justify-content: center;
     }
 }
 

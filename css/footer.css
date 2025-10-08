@@ -1,55 +1,72 @@
-/* =================================== */
-/* =======  Footer Section CSS  ====== */
-/* =================================== */
+/* ====================================================== */
+/* ===================  Footer Section  ================= */
+/* ====================================================== */
+
+/* ===== Overall Footer Container ===== */
 .footer-section {
-    background-color: #191938;
+    background-color: var(--secandry-color-2);
     text-align: center;
-        padding: 48px 32px 16px 32px;
+    padding: 48px 32px 16px 32px;
 }
+
+/* ===== Top Area (Heading + CTA Button) ===== */
 .footer-top {
     max-width: 1050px;
     margin: 0 auto 60px;
 }
+
 .footer-top h2 {
     font-size: 28px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     margin-bottom: 44px;
     line-height: 38px;
-    color: #fff;
+    color: var(--white);
 }
+img{
+    display: inline-block;
+}
+/* ===== Footer CTA Button ===== */
 .footer-btn {
     display: flex;
     align-items: center;
     gap: 8px;
     border-radius: 40px;
-    background: #fff;
+    background: var(--white);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     border: 2px solid transparent;
-    color: #191938;
+    color: var(--secandry-color-2);
     padding: 10px 50px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 0 auto;
 }
+
 .footer-btn svg {
-    stroke: #191938;
+    stroke: var(--secandry-color-2);
     transition: all 0.3s ease;
 }
+
+/* Button Hover State */
 .footer-btn:hover {
     background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
+    color: var(--white);
+    border: 2px solid var(--white);
 }
+
 .footer-btn:hover svg {
-    stroke: #fff;
+    stroke: var(--white);
 }
+
+/* ===== Horizontal Divider ===== */
 .footer-divider {
     width: 100%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.45);
+    background: var(--overlay-2);
     margin: 32px 0;
 }
+
+/* ===== Bottom Section (Columns Layout) ===== */
 .footer-bottom {
     display: flex;
     flex-wrap: wrap;
@@ -59,39 +76,51 @@
     max-width: 1600px;
     margin: 0 auto;
 }
+
+/* ===== Footer Column Base ===== */
 .footer-column img {
     margin: 0 0 28px 0;
     filter: brightness(0) invert(1);
 }
+
 .footer-column {
     position: relative;
 }
+
+/* Two-column Layout Helper */
 .col-2 {
     display: flex;
     gap: 20px;
 }
+
+/* ===== Column Borders ===== */
 .border-left {
-    background: rgba(255, 255, 255, 0.45);
+    background: var(--overlay-2);
     width: 1px;
     top: 0px;
     height: 100%;
     position: absolute;
     left: -24px;
 }
+
 .border-right {
-    background: rgba(255, 255, 255, 0.45);
+    background: var(--overlay-2);
     width: 1px;
     top: 0px;
     height: 100%;
     position: absolute;
     right: -24px;
 }
+
+/* ===== Column Headings ===== */
 .footer-column h4 {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     margin-bottom: 28px;
-    color: #fff;
+    color: var(--white);
 }
+
+/* ===== Links in Columns ===== */
 .footer-column ul {
     display: flex;
     flex-direction: column;
@@ -99,7 +128,7 @@
 }
 
 .footer-column ul li {
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     font-size: 18px;
     line-height: 21px;
 }
@@ -111,20 +140,25 @@
     color: var(--white);
     transition: color 0.3s ease, opacity 0.3s ease;
 }
+
 .footer-column ul li a::before {
     content: "•";
     margin-right: 10px;
-    color: #fff;
+    color: var(--white);
     font-size: 14px;
     text-decoration: none;
 }
+
+/* Link Hover Effect */
 .footer-column ul li a:hover {
-   opacity: 50%;
+    opacity: 50%;
 }
-/* ===== Social Icons ===== */
-.social h4{
+
+/* ===== Social Icons Section ===== */
+.social h4 {
     text-align: center;
 }
+
 .social-icons {
     display: flex;
     gap: 14px;
@@ -135,27 +169,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.social-icons a {
     font-size: 1.5rem;
-    background: #fff;
-    color: #191938;
+    background: var(--white);
+    color: var(--secandry-color-2);
     border-radius: 50%;
     width: 32px;
     height: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all 0.3s ease;
 }
-/* ===== Copyright ===== */
+
+/* ===== Copyright Text ===== */
 .footer-copy {
     text-align: center;
     font-size: 14px;
-    color: #ffffff;
-    font-weight: 400;
+    color: var(--white);
+    font-weight: var(--font-weight-normal);
 }
-/* ===== Responsive ===== */
+
+/* ====================================================== */
+/* ===================  Responsive  ===================== */
+/* ====================================================== */
+
+/* ===== Tablet & Medium Screens ===== */
 @media (max-width: 992px) {
     .footer-bottom {
         flex-wrap: wrap;
@@ -164,6 +199,7 @@
     }
 }
 
+/* ===== Mobile Devices ===== */
 @media (max-width: 768px) {
     .footer-top h2 {
         font-size: 1.6rem;

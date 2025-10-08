@@ -1,0 +1,361 @@
+/* ==========================================================
+   SECTION: Driven Text & Vision Section
+   Description: Styling for introductory headings and vision imagery
+========================================================== */
+.driven-text {
+    font-size: 24px;
+    font-weight: var(--font-weight-light);
+    margin: 40px 0 0 0;
+    color: var(--primary-color);
+}
+
+.feat-salution-main,
+.vision-main {
+    padding: 140px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+}
+
+.vision-img {
+    height: 700px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.vision-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.vision-main p {
+    margin: 0;
+}
+
+/* ==========================================================
+   SECTION: Robotics Cards (Two & Three Column Layouts)
+   Description: Grid cards with hover scale animation
+========================================================== */
+.robotic-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.robotic-card {
+    position: relative;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    height: 216px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.robotic-card:hover {
+    transform: scale(1.03);
+}
+
+/* Card header with icon and title */
+.robotic-card-header {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.robotic-card-header h1 {
+    font-size: 30px;
+    font-weight: var(--font-weight-normal);
+    color: var(--primary-color);
+}
+
+.robotic-card p {
+    font-size: 20px;
+    color: var(--primary-color);
+    line-height: 32px;
+    font-weight: var(--font-weight-light);
+}
+
+/* Grid variant for 3-column layout */
+.robotic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.robotic-grid .robotic-card {
+    height: unset;
+}
+
+/* Card spanning variations */
+.robotic-card-2 {
+    grid-column: span 1;
+}
+
+.robotic-card-3 {
+    grid-column: span 2;
+}
+
+/* ==========================================================
+   SECTION: Divider Boxes Row
+   Description: Section with horizontally aligned content boxes
+========================================================== */
+.wrap {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--clr-main);
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+}
+
+.box-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* Vertical divider line between boxes */
+.box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1px;
+    background: var(--LinearforSee);
+    -webkit-mask: var(--LinearMask);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 8px;
+}
+
+.ttl {
+    font-size: 30px;
+    font-weight: var(--font-weight-normal);
+    color: var(--primary-color);
+}
+
+.txt {
+    font-size: 20px;
+    color: var(--primary-color);
+    line-height: 32px;
+    font-weight: var(--font-weight-light);
+    padding: 24px 0 0 0;
+}
+
+/* Top border gradient line below boxes */
+.btm {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    border-top: 2px solid transparent;
+    border-image: var(--LinearforSee) 1;
+}
+
+/* ==========================================================
+   SECTION: Item Counter Section
+   Description: Numbered items with circular borders
+========================================================== */
+.item-container {
+    display: flex;
+    background: #f7f8ff;
+    padding: 74px;
+    justify-content: space-between;
+    border-radius: var(--radius);
+}
+
+.item {
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    overflow: hidden;
+}
+
+.item h2 {
+    font-size: 24px;
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-color);
+    margin: 14px 0 10px 0;
+}
+
+.item p {
+    color: var(--primary-color);
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: var(--font-weight-light);
+}
+
+.number {
+    font-size: 28px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+}
+
+/* Circular gradient border effect */
+.number::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px;
+    background: var(--LinearforSee);
+    -webkit-mask: var(--LinearMask);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   SECTION: Swiper Slider
+   Description: Custom styling for Swiper.js slider cards
+========================================================== */
+.swiper {
+    width: 100%;
+    margin: 36px 0 140px 0;
+    overflow: hidden;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 400px !important;
+    height: 300px !important;
+    display: flex !important;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    padding: 28px 24px;
+    border-radius: var(--radius);
+    margin-right: 16px;
+}
+
+.swiper-slide h1 {
+    font-size: 22px;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-normal);
+}
+
+.swiper-slide p {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-light);
+    line-height: 26px;
+}
+
+.swiper-slide a {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    color: #8c8c9b;
+    transition: all 0.3s ease;
+}
+
+.swiper-slide a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS
+========================================================== */
+
+/* --- Swiper Responsiveness --- */
+@media (max-width: 1200px) {
+    .swiper-slide {
+        width: 300px !important;
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 250px !important;
+        height: 220px !important;
+        padding: 20px 16px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
+
+    .swiper-slide p {
+        font-size: 14px;
+    }
+
+    /* Make item container stack on mobile */
+    .item {
+        width: 100%;
+    }
+
+    .item svg {
+        width: 60px;
+        height: 60px;
+        right: 10px;
+    }
+}
+
+/* --- Remove dividers and adjust layout on small screens --- */
+@media (max-width: 600px) {
+    .box:not(:last-child)::after {
+        display: none;
+    }
+    .row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        width: 200px !important;
+        height: 180px !important;
+        padding: 16px 12px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 16px;
+    }
+
+    .swiper-slide p {
+        font-size: 12px;
+    }
+}

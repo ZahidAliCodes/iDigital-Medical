@@ -1,9 +1,16 @@
+/* ====================================================== */
+/* ==================  Vision Section  ================== */
+/* ====================================================== */
+
+/* ===== Section Intro Text ===== */
 .driven-text {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     margin: 40px 0 0 0;
-    color: #1a1938;
+    color: var(--primary-color);
 }
+
+/* ===== Vision Section Layout ===== */
 .vision-main {
     padding: 140px 0;
     display: flex;
@@ -12,21 +19,33 @@
     text-align: center;
     gap: 60px;
 }
+
+/* ===== Vision Image Container ===== */
 .vision-img {
     height: 700px;
-    border-radius: 24px;
+    border-radius: var(--radius);
     overflow: hidden;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: var(--shadow);
 }
+
+/* ===== Image Fill and Crop ===== */
 .vision-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
+/* ===== Reset Paragraph Margin ===== */
 .vision-main p {
     margin: 0;
 }
+
+/* ====================================================== */
+/* ==================  Marquee Section  ================= */
+/* ====================================================== */
+
+/* ===== Marquee Wrapper ===== */
 .marquee {
     display: flex;
     overflow: hidden;
@@ -34,6 +53,8 @@
     user-select: none;
     gap: 42px;
 }
+
+/* ===== Moving Group of Logos/Text ===== */
 .marquee_group {
     flex-shrink: 0;
     display: flex;
@@ -43,34 +64,22 @@
     min-width: 100%;
     animation: scroll-right 50s linear infinite;
 }
-.grediant-text {
-    font-size: 22px;
-    text-align: left;
-    line-height: 24px;
-    font-weight: 600;
-    color: #1a1938;
-    align-self: flex-start;
+
+/* ===== Marquee Logo Images ===== */
+.marquee img {
+    display: block;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
-.grediant-text strong {
-    background: var(--LinearforSee, linear-gradient(180deg, #1a1938 0%, #2af 100%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+/* ===== Hover Effect on Logos ===== */
+.marquee img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
-.global-main {
-    display: flex;
-    justify-content: space-between;
-}
-.global-content {
-    width: 50%;
-}
-.global-map {
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    z-index: 1;
-    height: 500px;
-    width: 46%;
-    border-radius: 24px;
-}
+
+/* ===== Marquee Scroll Animation ===== */
 @keyframes scroll-right {
     from {
         transform: translateX(calc(-100% - 2rem));
@@ -79,18 +88,55 @@
         transform: translateX(0);
     }
 }
-.marquee img {
-    display: block;
-    height: 40px;
-    object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
+
+/* ====================================================== */
+/* ==================  Global Section  ================== */
+/* ====================================================== */
+
+/* ===== Layout: Text + Map ===== */
+.global-main {
+    display: flex;
+    justify-content: space-between;
 }
 
-.marquee img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+/* ===== Global Content Area ===== */
+.global-content {
+    width: 50%;
 }
-/* ==================== Responsive ==================== */
+
+/* ===== Global Map Container ===== */
+.global-map {
+    box-shadow: var(--shadow);
+    z-index: 1;
+    height: 500px;
+    width: 46%;
+    border-radius: var(--radius);
+}
+
+/* ====================================================== */
+/* =============  Gradient Highlight Text  ============== */
+/* ====================================================== */
+.grediant-text {
+    font-size: 22px;
+    text-align: left;
+    line-height: 24px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
+    align-self: flex-start;
+}
+
+.grediant-text strong {
+    background: var(--LinearforSee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ====================================================== */
+/* ==================  Responsive ======================= */
+/* ====================================================== */
+
+/* ===== Large Tablets ===== */
 @media (max-width: 1024px) {
     .marquee {
         gap: 1.5rem;
@@ -104,6 +150,8 @@
         padding: 16px;
     }
 }
+
+/* ===== Tablets ===== */
 @media (max-width: 768px) {
     .marquee {
         gap: 1rem;
@@ -117,6 +165,8 @@
         padding: 12px;
     }
 }
+
+/* ===== Mobile ===== */
 @media (max-width: 480px) {
     .marquee img {
         width: 80px;
