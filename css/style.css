@@ -13,6 +13,7 @@
 
     /* Fonts */
     --font-family: "Poppins", sans-serif;
+  --grad: linear-gradient(180deg, #1a1938 0%, #2af 100%);
 
     /* Spacing */
     --space-xs: 4px;
@@ -22,7 +23,6 @@
     --space-xl: 64px;
 
     --LinearforSee: linear-gradient(180deg, #1A1938 0%, #2AF 100%);
-
 
     /* Border Radius */
     --radius-sm: 5px;
@@ -357,7 +357,7 @@ button {
     -webkit-mask: linear-gradient(#f5f5f5 0 0) content-box, linear-gradient(#f5f5f5 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
-    border-radius: 40px;
+    border-radius: 24px;
     pointer-events: none;
 }
 .service-card-left {
