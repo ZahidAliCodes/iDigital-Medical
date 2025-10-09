@@ -294,20 +294,100 @@
 /* =========================================================
    Responsive Breakpoints
    ========================================================= */
-@media (max-width: 1200px) {
-    .swiper-slide {
-        width: 300px !important;
-        height: 250px !important;
+@media (max-width: 1250px) {
+    .feat-salution-main,
+    .vision-main,
+    .neuro-surgery-main {
+        padding: 80px 0 0 0;
+        flex-direction: column;
+    }
+
+    .feature-cards,
+    .row {
+        flex-direction: column;
+    }
+    .box {
+        border-bottom: 2px solid;
+    }
+    .feature-cards {
+        gap: 40px;
+    }
+    .btm {
+        border-top: none;
+    }
+
+    .neuro-surgery-left,
+    .neuro-surgery-right {
+        width: 100%;
+    }
+    .box:not(:last-child)::after {
+        background: none;
+    }
+    .neuro-surgery-right {
+        margin: 40px 0 0 0;
+    }
+    .feat-salution-main,
+    .vision-main {
+        align-items: flex-start;
+        text-align: start;
+        gap: 40px;
+    }
+    .driven-text {
+        font-size: 20px;
+        text-align: start;
+    }
+    .ttl {
+        font-size: 24px;
+    }
+    .txt {
+        font-size: 18px;
+        padding: 10px 0 0 0;
+    }
+}
+@media (max-width: 768px) {
+    .driven-text {
+        font-size: 18px;
+    }
+
+    .row {
+        justify-content: center;
+    }
+    .feature-card__description {
+        font-size: 26px;
+    }
+    .feature-card__para {
+        font-size: 16px;
+    }
+    .feature-card:not(.active) .feature-card__description {
+        font-size: 18px;
+    }
+
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
+    .swiper-slide p {
+        font-size: 14px;
+    }
+    .features-container {
+        margin: 0;
+    }
+    .image-slider {
+        height: 500px;
     }
 }
 
-@media (max-width: 768px) {
-    .swiper-slide {
-        width: 250px !important;
-        height: 220px !important;
-        padding: 20px 16px;
+@media (max-width: 480px) {
+    .box-flex {
+        flex-direction: column;
     }
-
+    .swiper-slide {
+        width: 270px !important;
+        height: 270px !important;
+        padding: 16px 12px;
+    }
+    .image-slider {
+        height: 300px;
+    }
     .swiper-slide h1 {
         font-size: 18px;
     }
@@ -315,30 +395,16 @@
     .swiper-slide p {
         font-size: 14px;
     }
-}
-
-@media (max-width: 600px) {
-    .box:not(:last-child)::after {
-        display: none;
+    .feature-card__description {
+        font-size: 24px;
     }
-
     .row {
-        justify-content: center;
+        padding-bottom: 0;
+        gap: 0;
     }
 }
-
-@media (max-width: 480px) {
-    .swiper-slide {
-        width: 200px !important;
-        height: 180px !important;
-        padding: 16px 12px;
-    }
-
-    .swiper-slide h1 {
-        font-size: 16px;
-    }
-
-    .swiper-slide p {
-        font-size: 12px;
+@media (max-width: 375px) {
+    .ttl {
+        font-size: 22px;
     }
 }

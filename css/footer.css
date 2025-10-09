@@ -22,7 +22,7 @@
     line-height: 38px;
     color: var(--white);
 }
-img{
+img {
     display: inline-block;
 }
 /* ===== Footer CTA Button ===== */
@@ -69,7 +69,6 @@ img{
 /* ===== Bottom Section (Columns Layout) ===== */
 .footer-bottom {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     text-align: left;
     gap: 40px;
@@ -191,39 +190,54 @@ img{
 /* ====================================================== */
 
 /* ===== Tablet & Medium Screens ===== */
-@media (max-width: 992px) {
+@media (max-width: 1250px) {
     .footer-bottom {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 30px;
+    }
+    .border-left,
+    .border-right {
+        display: none;
+    }
+    .social h4 {
+        text-align: start;
     }
 }
-
-/* ===== Mobile Devices ===== */
-@media (max-width: 768px) {
-    .footer-top h2 {
-        font-size: 1.6rem;
+@media (max-width: 690px) {
+    .footer-section {
+        padding: 50px 30px;
     }
-
-    .footer-top p {
-        font-size: 1.2rem;
-    }
-
     .footer-bottom {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
     }
-
-    .footer-column {
-        width: 100%;
+    .footer-top h2 {
+        line-height: 30px;
+        font-size: 18px;
+        margin-bottom: 30px;
     }
-
-    .social-icons {
-        justify-content: center;
-    }
-
     .footer-btn {
         font-size: 18px;
-        padding: 10px 40px;
+    }
+    .footer-column ul li {
+        font-size: 16px;
+    }
+    .footer-column ul {
+        gap: 14px;
+    }
+}
+@media (max-width: 400px) {
+    .footer-top h2 {
+        font-size: 16px;
+    }
+    .footer-btn {
+        font-size: 15px;
+    }
+    .footer-column ul li {
+        font-size: 15px;
+    }
+    .footer-column h4 {
+        font-size: 20px;
     }
 }

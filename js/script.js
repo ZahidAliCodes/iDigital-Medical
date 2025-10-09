@@ -28,24 +28,39 @@ if (header) {
 }
 
 /* ===========================
-   📱 Dropdown Touch Handling (Mobile)
-   - Enables touch-based dropdown open behavior
-   - Requires double tap to navigate to actual link
+   📱 Dropdown Touch/Click Handling (Mobile & Tablet)
+   - Enables dropdown open behavior on tap/click
+   - First tap opens dropdown, second tap navigates
    =========================== */
 document.querySelectorAll('.has-dropdown > .nav-link').forEach(link => {
   const dropdown = link.nextElementSibling;
   let tappedOnce = false;
 
+  // Handle touch (mobile)
   link.addEventListener('touchstart', function (e) {
-    if (window.innerWidth >= 992) return;
+    if (window.innerWidth >= 1111) return;
 
     if (!tappedOnce) {
       tappedOnce = true;
       e.preventDefault();
-      dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
-      setTimeout(() => tappedOnce = false, 1000);
+      this.parentElement.classList.toggle('open');
+      setTimeout(() => tappedOnce = false, 800);
     } else {
       window.location.href = this.getAttribute('href');
+    }
+  });
+
+  // Handle click (tablet)
+  link.addEventListener('click', function (e) {
+    if (window.innerWidth < 1111) {
+      if (!tappedOnce) {
+        tappedOnce = true;
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+        setTimeout(() => tappedOnce = false, 800);
+      } else {
+        window.location.href = this.getAttribute('href');
+      }
     }
   });
 });
@@ -64,19 +79,6 @@ if (hamburger && nav) {
     nav.classList.toggle("open");
   });
 }
-
-/* ===========================
-   📂 Mobile Dropdown Toggle
-   - Expands/collapses dropdown items in mobile view
-   =========================== */
-document.querySelectorAll(".has-dropdown").forEach((item) => {
-  item.addEventListener("click", (e) => {
-    if (window.innerWidth < 768) {
-      e.preventDefault();
-      item.parentElement.classList.toggle("open");
-    }
-  });
-});
 
 /* ===========================
    🧭 Our Services Cards Hover Effect

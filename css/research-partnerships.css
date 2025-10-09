@@ -283,48 +283,109 @@
    RESPONSIVE ADJUSTMENTS
    Breakpoints for mobile and tablet devices
    ========================================================================== */
-@media (max-width: 1200px) {
-    .swiper-slide {
-        width: 300px !important;
-        height: 250px !important;
+@media (max-width: 1250px) {
+    .feat-salution-main, .vision-main,
+   .Why-choose-robotic{
+    padding: 80px 0 0 0;
+   }
+    .neuro-surgery-main{
+        padding: 80px 0 0 0;
+        flex-direction: column;
+    }
+    .neuro-surgery-left,
+    .neuro-surgery-right{
+        width: 100%;
+    }
+  
+    .neuro-surgery-right{
+        margin: 40px 0 0 0;
+    }
+    .driven-text{
+        font-size: 20px;
+        text-align: start;
+    }
+    .feat-salution-main, .vision-main,
+    .Why-choose-robotic{
+        gap: 40px;
+    }
+    .feat-salution-main, .vision-main,
+    .Why-choose-robotic{
+        align-items: self-start;
+        text-align: left;
+    }
+   
+        .vision-img {
+        height: 400px;
+    }
+    .collab-card-main,
+    .research-card-main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .collab-card,
+    .research-card{
+        width: 100%;
     }
 }
-
-@media (max-width: 992px) {
-    .collab-card {
-        flex: 1 1 calc(50% - 20px);
+@media (max-width: 768px) {  
+    .collab-card-main,
+    .research-card-main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }  
+    .research-card {
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+}
+.research-card h1{
+    min-height: auto;
+    max-height: auto;
+}
+    .driven-text {
+        font-size: 18px;
     }
-    .collab-card h1 {
-        font-size: 1.3rem;
+    .swiper-slide h1 {
+        font-size: 18px;
     }
+    .swiper-slide p {
+        font-size: 14px;
+    }
+    .image-slider {
+    height: 500px;
 }
 
-@media (max-width: 768px) {
-    .swiper-slide {
-        width: 250px !important;
-        height: 220px !important;
-        padding: 20px 16px;
-    }
-    .swiper-slide h1 { font-size: 18px; }
-    .swiper-slide p { font-size: 14px; }
-}
-
-@media (max-width: 600px) {
-    .collab-card {
-        flex: 1 1 100%;
-        min-height: 250px;
-        padding: 20px;
-    }
-    .collab-card h1 { font-size: 1.2rem; }
-    .collab-card p { font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
+    .research-card h1{
+        font-size: 20px;
+    }
+    .research-card p{
+        font-size: 16px;
+    }
+    .research-card{
+        padding: 30px;
+    }
     .swiper-slide {
-        width: 200px !important;
-        height: 180px !important;
+        width: 300px !important;
+        height: 270px !important;
         padding: 16px 12px;
     }
-    .swiper-slide h1 { font-size: 16px; }
-    .swiper-slide p { font-size: 12px; }
+.image-slider {
+        height: 300px;
+    }
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
+
+    .swiper-slide p {
+        font-size: 14px;
+    }
+    .feature-card__description {
+        font-size: 24px;
+    }
+   
 }

@@ -44,7 +44,7 @@
     font-size: 34px;
     font-weight: var(--font-weight-bold);
     line-height: 50px;
-    margin: 16px 0 0 0; 
+    margin: 16px 0 0 0;
 }
 
 /* ===== Form Wrapper ===== */
@@ -73,7 +73,7 @@ label {
     color: var(--primary-color);
     font-size: 20px;
     font-weight: var(--font-weight-normal);
-    line-height: 36px; 
+    line-height: 36px;
 }
 
 /* ===== Input & Textarea Fields ===== */
@@ -82,7 +82,7 @@ input[type="email"],
 input[type="tel"],
 textarea {
     border: none;
-    border-bottom: 1px solid #CACACA;
+    border-bottom: 1px solid #cacaca;
     font-size: 16px;
     padding: 8px 0;
     background: transparent;
@@ -136,12 +136,9 @@ textarea {
 /* ===== Container for Social Links ===== */
 .social-icons-contact {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 18px;
     align-items: center;
-    justify-content: center;
-    min-width: 100%;
     margin-top: 20px;
 }
 
@@ -172,18 +169,85 @@ textarea {
 /* ====================================================== */
 /* ==================  Responsive ======================= */
 /* ====================================================== */
-
-/* ===== Tablet & Medium Screens ===== */
-@media (min-width: 768px) {
-    .social-icons-contact {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        min-width: 40px;
-        margin-top: 0;
+@media (max-width: 1100px) {
+    .row-inputs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .site-header {
+        padding: 30px;
+    }
+    .contact-container {
+        margin: 80px auto;
+    }
+    .driven-text {
+        font-size: 20px;
+    }
+    .form-content h1 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    form {
+        margin: 0;
+    }
+    label {
+        font-size: 18px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 4px 0;
+    }
+    .message-group {
+        margin-bottom: 48px;
     }
 
     .contact-container {
         padding: 30px 25px;
+    }
+    .form-content button {
+        font-size: 16px;
+    }
+}
+@media (max-width: 780px) {
+    .social-icons-contact {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        min-width: 40px;
+        margin-top: 0;
+    }
+}
+@media (max-width: 650px) {
+    .form-content h1 br {
+        display: none;
+    }
+    .form-content h1 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .row-inputs {
+        margin-bottom: 32px;
+    }
+}
+@media (max-width: 400px) {
+    .driven-text {
+        font-size: 18px;
+    }
+    .form-content h1 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    label {
+        font-size: 16px;
+    }
+    .form-content button {
+        font-size: 16px;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .site-header {
+        padding: 20px;
     }
 }

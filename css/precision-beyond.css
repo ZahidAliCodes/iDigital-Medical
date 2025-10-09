@@ -105,7 +105,7 @@
     height: 216px;
     transition: transform 0.5s ease-in-out;
 }
-.robotic-card:hover{
+.robotic-card:hover {
     transform: scale(1.03);
 }
 .robotic-card-header {
@@ -187,20 +187,99 @@
    Breakpoints for tablet and mobile screens
    ========================================================================== */
 
-@media (max-width: 1200px) {
-    .swiper-slide {
-        width: 300px !important;
-        height: 250px !important;
+@media (max-width: 1250px) {
+    .feat-salution-main,
+    .vision-main,
+    .Why-choose-robotic {
+        padding: 80px 0 0 0;
+    }
+    .neuro-surgery-main {
+        padding: 80px 0 0 0;
+        flex-direction: column;
+    }
+
+    .neuro-surgery-left,
+    .neuro-surgery-right {
+        width: 100%;
+    }
+    .box:not(:last-child)::after {
+        background: none;
+    }
+    .neuro-surgery-right {
+        margin: 40px 0 0 0;
+    }
+
+    .driven-text {
+        font-size: 20px;
+        text-align: start;
+    }
+    .feat-salution-main,
+    .vision-main,
+    .Why-choose-robotic {
+        gap: 40px;
+    }
+    .feat-salution-main,
+    .vision-main,
+    .Why-choose-robotic {
+        align-items: self-start;
+        text-align: left;
+    }
+    .robotic-card {
+        height: auto;
+    }
+    .robotic-card p {
+        font-size: 18px;
+    }
+    .vision-img {
+        height: 400px;
+    }
+}
+@media (max-width: 900px) {
+    .robotic-flex {
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .driven-text {
+        font-size: 18px;
+    }
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
+    .swiper-slide p {
+        font-size: 14px;
+    }
+    .features-container {
+        margin: 0;
+    }
+    .image-slider {
+        height: 500px;
     }
 }
 
-@media (max-width: 768px) {
-    .swiper-slide {
-        width: 250px !important;
-        height: 220px !important;
-        padding: 20px 16px;
+@media (max-width: 480px) {
+    .robotic-card-header {
+        flex-direction: column;
     }
-
+    .robotic-flex {
+        width: 100%;
+    }
+    .robotic-card-header h1 {
+        font-size: 24px;
+    }
+    .robotic-card {
+        gap: 14px;
+    }
+    .swiper-slide {
+        width: 300px !important;
+        height: 270px !important;
+        padding: 16px 12px;
+    }
+    .image-slider {
+        height: 300px;
+    }
     .swiper-slide h1 {
         font-size: 18px;
     }
@@ -208,20 +287,23 @@
     .swiper-slide p {
         font-size: 14px;
     }
+    .feature-card__description {
+        font-size: 24px;
+    }
+    .row {
+        padding-bottom: 0;
+        gap: 0;
+    }
 }
-
-@media (max-width: 480px) {
-    .swiper-slide {
-        width: 200px !important;
-        height: 180px !important;
-        padding: 16px 12px;
+@media (max-width: 375px) {
+    .ttl {
+        font-size: 22px;
     }
-
-    .swiper-slide h1 {
+    .robotic-card-header h1 {
+        font-size: 20px;
+    }
+    .robotic-card p {
         font-size: 16px;
-    }
-
-    .swiper-slide p {
-        font-size: 12px;
+        line-height: 26px;
     }
 }

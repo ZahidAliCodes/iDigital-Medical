@@ -150,45 +150,80 @@
 /* =========================================================
    Responsive Breakpoints for Swiper
    ========================================================= */
-
-/* Medium Screens */
-@media (max-width: 1200px) {
-  .swiper-slide {
-    width: 300px !important;
-    height: 250px !important;
-  }
+@media (max-width: 1250px) {
+    .driven-text{
+        font-size: 20px;
+        text-align: start;
+    }
+    .feat-salution-main, .vision-main{
+        padding: 50px 0 0 0;
+    }
+    .vision-img{
+        height: 400px;
+    }
+   .heading-wrapping{
+    text-align: start;
+   }
+   .feat-salution-main, .vision-main,
+   .service-bg{
+    gap: 40px ;
+   }
+    .feature-cards{
+        margin: 40px 0;
+    }
+    .feat-salution-main, .vision-main{
+        align-items: flex-start;
+    }
+    .swiper{
+        margin:30px 0 40px 0;
+    }
+    .vision-main h2{
+      font-size: 30px;
+    }
+    .image-slider__cta{
+  margin: 0 auto;
 }
-
-/* Tablets */
+}
 @media (max-width: 768px) {
-  .swiper-slide {
-    width: 250px !important;
-    height: 220px !important;
-    padding: 20px 16px;
-  }
-
-  .swiper-slide h1 {
-    font-size: 18px;
-  }
-
-  .swiper-slide p {
-    font-size: 14px;
-  }
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
+    .swiper-slide p {
+        font-size: 14px;
+    }
+    .features-container{
+        margin: 0;
+    }
+    .image-slider {
+    height: 500px;
 }
 
-/* Mobile */
+}
+@media (max-width: 680px) {
+    .driven-text {
+        font-size: 18px;
+    }
+        .vision-main h2 {
+        font-size: 20px;
+    }
+}
+
+
 @media (max-width: 480px) {
-  .swiper-slide {
-    width: 200px !important;
-    height: 180px !important;
-    padding: 16px 12px;
-  }
+    .swiper-slide {
+        width: 270px !important;
+        height: 270px !important;
+        padding: 16px 12px;
+    }
+.image-slider {
+        height: 300px;
+    }
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
 
-  .swiper-slide h1 {
-    font-size: 16px;
-  }
-
-  .swiper-slide p {
-    font-size: 12px;
-  }
+    .swiper-slide p {
+        font-size: 14px;
+    }
 }
+

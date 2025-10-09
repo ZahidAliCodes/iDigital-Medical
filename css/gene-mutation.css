@@ -187,6 +187,7 @@
     display: flex;
     background: #f7f8ff;
     padding: 74px;
+    width: 100%;
     justify-content: space-between;
     border-radius: var(--radius);
 }
@@ -299,21 +300,107 @@
    RESPONSIVE BREAKPOINTS
 ========================================================== */
 
-/* --- Swiper Responsiveness --- */
-@media (max-width: 1200px) {
-    .swiper-slide {
-        width: 300px !important;
-        height: 250px !important;
+@media (max-width: 1250px) {
+    .feat-salution-main,
+    .vision-main,
+    .Why-choose-robotic {
+        padding: 80px 0 0 0;
+    }
+    .driven-text {
+        font-size: 20px;
+        text-align: start;
+    }
+    .feat-salution-main,
+    .vision-main,
+    .Why-choose-robotic {
+        gap: 40px;
+    }
+    .feat-salution-main,
+    .vision-main,
+    .Why-choose-robotic {
+        align-items: self-start;
+        text-align: left;
+    }
+    .vision-img {
+        height: 400px;
+    }
+    .robotic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .robotic-card-3 {
+        grid-column: span 1;
+    }
+    .item-container {
+        padding: 74px 30px;
+    }
+}
+@media (max-width: 930px) {
+    .robotic-grid,
+    .robotic-flex {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item-container,
+    .row {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+    .item {
+        width: 100%;
+    }
+    .box:not(:last-child)::after {
+        padding: 0;
+    }
+    .box {
+        border-bottom: 2px solid;
+    }
+    .btm {
+        border-top: none;
+    }
+    .ttl {
+        font-size: 24px;
+    }
+    .txt {
+        font-size: 18px;
+        padding: 10px 0 0 0;
+    }
+}
+@media (max-width: 768px) {
+    .driven-text {
+        font-size: 18px;
+    }
+    .swiper-slide h1 {
+        font-size: 18px;
+    }
+    .swiper-slide p {
+        font-size: 14px;
+    }
+    .image-slider {
+        height: 500px;
+    }
+    .item h2 {
+        font-size: 20px;
+    }
+    .item p {
+        font-size: 18px;
+    }
+    .robotic-card {
+        height: auto;
     }
 }
 
-@media (max-width: 768px) {
-    .swiper-slide {
-        width: 250px !important;
-        height: 220px !important;
-        padding: 20px 16px;
+@media (max-width: 480px) {
+    .box-flex {
+        flex-direction: column;
     }
-
+    .swiper-slide {
+        width: 270px !important;
+        height: 270px !important;
+        padding: 16px 12px;
+    }
+    .image-slider {
+        height: 300px;
+    }
     .swiper-slide h1 {
         font-size: 18px;
     }
@@ -321,41 +408,16 @@
     .swiper-slide p {
         font-size: 14px;
     }
-
-    /* Make item container stack on mobile */
-    .item {
-        width: 100%;
-    }
-
-    .item svg {
-        width: 60px;
-        height: 60px;
-        right: 10px;
-    }
-}
-
-/* --- Remove dividers and adjust layout on small screens --- */
-@media (max-width: 600px) {
-    .box:not(:last-child)::after {
-        display: none;
+    .feature-card__description {
+        font-size: 24px;
     }
     .row {
-        justify-content: center;
+        padding-bottom: 0;
+        gap: 0;
     }
 }
-
-@media (max-width: 480px) {
-    .swiper-slide {
-        width: 200px !important;
-        height: 180px !important;
-        padding: 16px 12px;
-    }
-
-    .swiper-slide h1 {
-        font-size: 16px;
-    }
-
-    .swiper-slide p {
-        font-size: 12px;
+@media (max-width: 375px) {
+    .ttl {
+        font-size: 22px;
     }
 }

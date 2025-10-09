@@ -135,7 +135,21 @@
 /* ====================================================== */
 /* ==================  Responsive ======================= */
 /* ====================================================== */
-
+@media (max-width: 1250px) {
+    .driven-text {
+        font-size: 20px;
+    }
+    .vision-main {
+        padding: 80px 0;
+    }
+    .vision-img {
+        height: 400px;
+    }
+    .grediant-text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
 /* ===== Large Tablets ===== */
 @media (max-width: 1024px) {
     .marquee {
@@ -146,8 +160,20 @@
         animation-duration: 40s;
     }
     .marquee img {
-        width: 140px;
-        padding: 16px;
+        width: 100px;
+    }
+    .global-main {
+        flex-direction: column;
+    }
+    .global-map,
+    .global-content {
+        width: 100%;
+    }
+    .global-map {
+        margin: 48px 0 0 0;
+    }
+    .vision-main {
+        gap: 40px;
     }
 }
 
@@ -161,8 +187,7 @@
         animation-duration: 30s;
     }
     .marquee img {
-        width: 100px;
-        padding: 12px;
+        width: 80px;
     }
 }
 
@@ -170,9 +195,17 @@
 @media (max-width: 480px) {
     .marquee img {
         width: 80px;
-        padding: 8px;
     }
     .marquee_group {
         animation-duration: 25s;
+    }
+    .global-map {
+        height: 300px;
+    }
+    .driven-text {
+        font-size: 18px;
+    }
+    .grediant-text {
+        font-size: 16px;
     }
 }
